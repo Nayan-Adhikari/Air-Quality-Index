@@ -43,3 +43,56 @@ AQI-Prediction-Model/
 │   ├── AQI_World_Map.html                         # World map
 │   ├── Visualize.ipynb                            # Visualize
 │── README.md                                      # Project Documentation
+## 🚀 Getting Started
+
+### **1️⃣ Train & Save Model**
+# Train Model & Save
+python Src/Train_model.ipynb
+```
+✅ **Model saved as:** `Model/AQI_Predictions.pkl`
+
+### **2️⃣ Make Predictions**
+
+✅ **Predictions saved in:** `AQI_Predictions.csv`
+
+---
+
+## 📊 Power BI Dashboard
+If you want to analyze AQI data visually:
+1️⃣ Open **Power BI Desktop**
+2️⃣ Load `AQI and Lat Long of Countries_cleaned.csv`
+        `AQI_Predictions.csv`
+3️⃣ Create charts:
+   - **AQI World Map** 🗺️
+   - **Pollutant Trends** 📉
+   - **AQI Category Breakdown** 🏭
+
+---
+
+## 🛠️ Future Development: Seeking Contributors
+We are looking for **developers interested in transforming this project into a web application**. If you have expertise in **web development (React, Flask, FastAPI, MongoDB, PostgreSQL)** and want to contribute, please join us!
+
+🚀 **Interested? Submit a pull request or contact us!**
+
+---
+
+## 🤝 Contributors
+- **Nayan Adhikari** - Machine Learning Model Development 📈
+- **Pallabi Ghosh** - Power BI Dashboard 📊
+
+📌 **Want to contribute?** Fork the repo & submit a pull request! 🎉
+
+---
+
+## 📜 License
+This project is **open-source** under the **MIT License**. Feel free to use and modify it.
+
+---
+
+## 📞 Contact
+📧 **Email:** nayanadhikari1507@gmail.com
+🌐 **GitHub:** https://github.com/Nayan-Adhikari
+
+
+---
+🚀 **Built with ❤️ to Improve Air Quality Awareness!** 🌍🔥
