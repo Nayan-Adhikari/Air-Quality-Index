@@ -13,6 +13,7 @@ The model is developed by **Nayan Adhikari**, while the dashboard is being built
 - XGBoost (AQI Prediction)
 - Pandas, NumPy (Data Processing)
 - Scikit-learn (Feature Engineering & Evaluation)
+- Matplotlib, Seaborn, Folium (Visualization)
 
 ### **Dashboard (Power BI)**
 - Power BI Desktop (Visualization)
