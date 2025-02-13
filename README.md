@@ -6,7 +6,7 @@ This project focuses on **predicting Air Quality Index (AQI) using Machine Learn
 - Provide pollutant-specific AQI insights
 - Be used in a **Power BI dashboard** for visualization
 
-The model is developed by **[Your Name]**, while the dashboard is being built by a collaborator. We welcome contributions from developers interested in creating a **full-stack web application** for this project. 🚀
+The model is developed by **Nayan Adhikari**, while the dashboard is being built by a collaborator **Pallabi Ghosh**. We welcome contributions from developers interested in creating a **full-stack web application** for this project. 🚀
 
 ## 🏗️ Tech Stack
 ### **Machine Learning Model**
@@ -29,10 +29,17 @@ The model is developed by **[Your Name]**, while the dashboard is being built by
 ## 📂 Folder Structure
 ```txt
 AQI-Prediction-Model/
-│── model/               # Trained ML Model
-│   ├── aqi_model.pkl    # Saved XGBoost Model
-│── dataset/             # AQI Data
-│   ├── AQI_Historical.csv # Raw Dataset
-│── powerbi/             # Dashboard Resources
-│   ├── AQI_PowerBI.pbix # Power BI Report
-│── README.md            # Project Documentation
+│── Model/                                         # Trained ML Model
+│   ├── AQI_Predictions.pkl                        # Saved XGBoost Model
+│── Data/                                          # AQI Data
+│   ├── AQI and Lat Long of Countries.csv          # Raw Dataset
+│   ├── AQI and Lat Long of Countries_cleaned.csv  # Cleaned Dataset
+│   ├── AQI_Predictions.csv                        # Predicted Dataset
+│── Dashboard/                                     # Dashboard Resources
+│   ├── AQI_PowerBI.pbix                           # Power BI Report
+│── Src/                                           # Source file
+│   ├── Train_model.ipynb                          # Training model
+│── Visualizations/                                # Visualization
+│   ├── AQI_World_Map.html                         # World map
+│   ├── Visualize.ipynb                            # Visualize
+│── README.md                                      # Project Documentation
