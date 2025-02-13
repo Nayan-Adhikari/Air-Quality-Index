@@ -43,12 +43,13 @@ AQI-Prediction-Model/
 │   ├── AQI_World_Map.html                         # World map
 │   ├── Visualize.ipynb                            # Visualize
 │── README.md                                      # Project Documentation
+```
 ## 🚀 Getting Started
 
 ### **1️⃣ Train & Save Model**
 # Train Model & Save
 python Src/Train_model.ipynb
-```
+
 ✅ **Model saved as:** `Model/AQI_Predictions.pkl`
 
 ### **2️⃣ Make Predictions**
