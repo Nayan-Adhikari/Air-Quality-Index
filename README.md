@@ -10,7 +10,7 @@ The model is developed by **Nayan Adhikari**, while the dashboard is being built
 
 ## 🏗️ Tech Stack
 ### **Machine Learning Model**
-- XGBoost (AQI Prediction)
+- XGBoost (AQI Prediction) , LightGBM (AQI Prediction), Random Forest (AQI Prediction), Support Vector Regression (AQI Prediction)
 - Pandas, NumPy (Data Processing)
 - Scikit-learn (Feature Engineering & Evaluation)
 
@@ -24,24 +24,55 @@ The model is developed by **Nayan Adhikari**, while the dashboard is being built
 - **Backend:** Flask / FastAPI
 - **Database:** PostgreSQL / MongoDB
 
----
+  ---
 
-## 📂 Folder Structure
-```txt
-AQI-Prediction-Model/
-│── model/               # Trained ML Model
-│   ├── aqi_model.pkl    # Saved XGBoost Model
-│   ├── train.py         # Model Training Script
-│   ├── predict.py       # AQI Prediction Script
-│── dataset/             # AQI Data
-│   ├── AQI_Historical.csv # Raw Dataset
-│── powerbi/             # Dashboard Resources
-│   ├── AQI_PowerBI.pbix # Power BI Report
-│── README.md            # Project Documentation
+## 🚀 Features
+✅ **Predict AQI Value & Category** from pollutant data  
+✅ **Uses Machine Learning Models:** LightGBM, Random Forest, XGBoost  
+✅ **Real-time User Input Support**  
+✅ **Performance Metrics:** R² Score, MAE, RMSE  
+✅ **Trained on Large AQI Datasets**  
+✅ **Deployable as a Web App or API**  
+
+## 📊 Model Performance Comparison
+| Model          | R² Score (Higher = Better) | MAE (Lower = Better) | RMSE (Lower = Better) |
+|---------------|------------------------|---------------------|---------------------|
+| **LightGBM**  | ✅ 0.9982 (Best)       | ✅ 0.3058 (Best)   | ✅ 1.7156 (Best)   |
+| **Random Forest** | ❌ 0.9960  | ❌ 1.2711  | ❌ 2.5527  |
+| **XGBoost**   | ❌ 0.9819  | ❌ 0.5357  | ❌ 5.4680  |
+
+📌 **Final Model Choice:** **LightGBM** is the best due to highest accuracy.
+
+## 📂 Project Structure
 ```
-
----
-
+Air Quality Index Fullstack/
+│
+│── Model/
+│   ├── AQI_XGB_Model.pkl
+│   ├── AQI_Category_Model.pkl
+│   ├── AQI_LightGBM_Model.pkl
+│   ├── AQI_Predictions_Model.pkl (Random Forest)
+│   ├── AQI_svr_Model.pkl
+│
+│── Src/
+│   ├── input.py  # User input for AQI prediction
+│   ├── Train_model_LightGBM.ipynb
+│   ├── Train_model_Random_Forest.ipynb
+│   ├── Train_model_SVR.ipynb
+│   ├── Train_model_Xgb.ipynb
+│── Data/
+│   ├── AQI and Lat Long of Countries_cleaned.csv  # Raw AQI data
+│   ├── AQI and Lat Long of Countries.csv 
+│   ├── AQI_Predictions.csv 
+│── Data/
+│   ├── Data_cleaning.ipynb
+│   ├── Exploratory_data_cleaning.ipynb
+│── Dashboard/
+│   ├── AQI.pbix
+│── Visualization/
+│   ├── AQI_World_Map.html
+│   ├── Visualize.ipynb
+```
 ## 🚀 Getting Started
 
 ### **1️⃣ Train & Save Model**
@@ -61,6 +92,33 @@ python model/predict.py --input sample_data.csv
 ✅ **Predictions saved in:** `predictions.csv`
 
 ---
+## 🛠 How to Run
+1️⃣ **Install dependencies**:
+```bash
+pip install lightgbm xgboost numpy pandas scikit-learn joblib
+```
+2️⃣ **Train the models** (if not already trained):
+```bash
+python train_dual_models.py
+```
+3️⃣ **Run manual input for prediction:**
+```bash
+python input.py
+```
+
+## 🔥 Example Prediction
+```
+🔹 Enter pollutant values for AQI prediction:
+Ozone AQI Value: 85
+NO2 AQI Value: 60
+PM2.5 AQI Value: 110
+CO AQI Value: 1.2
+lat: 28.61
+
+🔹 Predicted AQI Value: 110.09
+🔹 Predicted AQI Category: Very Unhealthy
+🔹 Model Prediction Accuracy: 100.00%
+```
 
 ## 📊 Power BI Dashboard
 If you want to analyze AQI data visually:
