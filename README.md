@@ -6,14 +6,13 @@ This project focuses on **predicting Air Quality Index (AQI) using Machine Learn
 - Provide pollutant-specific AQI insights
 - Be used in a **Power BI dashboard** for visualization
 
-The model is developed by **Nayan Adhikari**, while the dashboard is being built by a collaborator **Pallabi Ghosh**. We welcome contributions from developers interested in creating a **full-stack web application** for this project. 🚀
+The model is developed by **Nayan Adhikari**, while the dashboard is being built by a collaborator. We welcome contributions from developers interested in creating a **full-stack web application** for this project. 🚀
 
 ## 🏗️ Tech Stack
 ### **Machine Learning Model**
 - XGBoost (AQI Prediction)
 - Pandas, NumPy (Data Processing)
 - Scikit-learn (Feature Engineering & Evaluation)
-- Matplotlib, Seaborn, Folium (Visualization)
 
 ### **Dashboard (Power BI)**
 - Power BI Desktop (Visualization)
@@ -30,44 +29,48 @@ The model is developed by **Nayan Adhikari**, while the dashboard is being built
 ## 📂 Folder Structure
 ```txt
 AQI-Prediction-Model/
-│── Model/                                         # Trained ML Model
-│   ├── AQI_Predictions.pkl                        # Saved XGBoost Model
-│── Data/                                          # AQI Data
-│   ├── AQI and Lat Long of Countries.csv          # Raw Dataset
-│   ├── AQI and Lat Long of Countries_cleaned.csv  # Cleaned Dataset
-│   ├── AQI_Predictions.csv                        # Predicted Dataset
-│── Dashboard/                                     # Dashboard Resources
-│   ├── AQI_PowerBI.pbix                           # Power BI Report
-│── Src/                                           # Source file
-│   ├── Train_model.ipynb                          # Training model
-│── Visualizations/                                # Visualization
-│   ├── AQI_World_Map.html                         # World map
-│   ├── Visualize.ipynb                            # Visualize
-│── README.md                                      # Project Documentation
+│── model/               # Trained ML Model
+│   ├── aqi_model.pkl    # Saved XGBoost Model
+│   ├── train.py         # Model Training Script
+│   ├── predict.py       # AQI Prediction Script
+│── dataset/             # AQI Data
+│   ├── AQI_Historical.csv # Raw Dataset
+│── powerbi/             # Dashboard Resources
+│   ├── AQI_PowerBI.pbix # Power BI Report
+│── README.md            # Project Documentation
 ```
+
+---
+
 ## 🚀 Getting Started
 
 ### **1️⃣ Train & Save Model**
-# Train Model & Save
-python Src/Train_model.ipynb
+```bash
+# Install Dependencies
+pip install -r requirements.txt
 
-✅ **Model saved as:** `Model/AQI_Predictions.pkl`
+# Train Model & Save
+python model/train.py
+```
+✅ **Model saved as:** `model/aqi_model.pkl`
 
 ### **2️⃣ Make Predictions**
-
-✅ **Predictions saved in:** `AQI_Predictions.csv`
+```bash
+python model/predict.py --input sample_data.csv
+```
+✅ **Predictions saved in:** `predictions.csv`
 
 ---
 
 ## 📊 Power BI Dashboard
 If you want to analyze AQI data visually:
 1️⃣ Open **Power BI Desktop**
-2️⃣ Load `AQI and Lat Long of Countries_cleaned.csv`
-        `AQI_Predictions.csv`
+2️⃣ Load `AQI_Historical.csv`
 3️⃣ Create charts:
    - **AQI World Map** 🗺️
    - **Pollutant Trends** 📉
    - **AQI Category Breakdown** 🏭
+4️⃣ Publish & Share 🌍
 
 ---
 
@@ -98,3 +101,4 @@ This project is **open-source** under the **MIT License**. Feel free to use and 
 
 ---
 🚀 **Built with ❤️ to Improve Air Quality Awareness!** 🌍🔥
+
